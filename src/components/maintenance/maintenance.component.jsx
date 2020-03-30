@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './maintenance.styles.css';
 
-function App() {
+function MaintenancePage() {
   return (
     <h1 class="maintenance center">Down for maintenance...</h1>
   );
 }
 
-export default App;
+export default MaintenancePage;
