@@ -1,3 +1,3 @@
-## PERSONAL WEBSITE
+## About
 
-This is the code for Daniel Scalettar's personal website.
+This is the repo for my personal website.

@@ -1,6 +1,11 @@
 import React from "react";
 
-import { MenuContainer } from "./function-menu.styles";
+import { MenuContainer, LinksContainer } from "./function-menu.styles";
+
+/* DESCRIPTION 
+Contains a site menu which is toggled to be visible
+or invisible by FunctionMenuToggle
+*/
 
 class FunctionMenu extends React.Component {
   render() {
@@ -9,18 +14,13 @@ class FunctionMenu extends React.Component {
         onClick={this.props.onClick}
         isVisible={this.props.isVisible}
       >
-        <h2>
+        <LinksContainer>
+          <a href="/home">Home</a>
           <a href="/technical">Technical</a>
-        </h2>
-        <h2>
           <a href="/personal">Personal</a>
-        </h2>
-        <h2>
           <a href="/projects">Projects</a>
-        </h2>
-        <h2>
           <a href="/articles">Articles</a>
-        </h2>
+        </LinksContainer>
       </MenuContainer>
     );
   }

@@ -19,7 +19,7 @@ const invisibleStyle = css`
 export const MenuContainer = styled.div`
     width: 100vw;
     height: 100vh;
-    background-color: #FFE600;
+    background-color: whitesmoke;
     position: fixed;
     top: 0;
     left: 0;
@@ -28,4 +28,28 @@ export const MenuContainer = styled.div`
     z-index: 1000;
 
     ${getVisibleStyles}
+`;
+
+export const LinksContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    a{
+        outline: none;
+        text-decoration: none;
+        font-size: 25px;
+        padding: 15px;
+    }
+    a:link{
+        color: black;
+    }
+    a:visited {
+        color: black;
+    }
+    a:focus {
+        color: #ff3c00;
+    }
+    a:hover {
+        color: #ff3c00;
+    }
 `;
