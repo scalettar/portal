@@ -1,6 +1,10 @@
 import React from "react";
 
-import { MenuContainer, LinksContainer } from "./function-menu.styles";
+import {
+  MenuContainer,
+  LinksContainer,
+  LinkContainer
+} from "./function-menu.styles";
 
 /* DESCRIPTION 
 Contains a site menu which is toggled to be visible
@@ -15,11 +19,11 @@ class FunctionMenu extends React.Component {
         isVisible={this.props.isVisible}
       >
         <LinksContainer>
-          <a href="/home">Home</a>
-          <a href="/technical">Technical</a>
-          <a href="/personal">Personal</a>
-          <a href="/projects">Projects</a>
-          <a href="/articles">Articles</a>
+          <LinkContainer to="/">Home</LinkContainer>
+          <LinkContainer to="/technical">Technical</LinkContainer>
+          <LinkContainer to="/personal">Personal</LinkContainer>
+          <LinkContainer to="/projects">Projects</LinkContainer>
+          <LinkContainer to="/articles">Articles</LinkContainer>
         </LinksContainer>
       </MenuContainer>
     );

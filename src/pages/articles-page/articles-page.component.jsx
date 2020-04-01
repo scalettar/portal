@@ -1,14 +1,16 @@
 import React from "react";
 
+import { BackgroundContainer, MainTitleContainer } from "./articles-page.styles";
+
 class ArticlesPage extends React.Component {
-  render() {
-    return (
-      <div>
-        <h2>Articles</h2>
-        <p>Placeholder for future articles.</p>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<BackgroundContainer>
+				<MainTitleContainer>Articles</MainTitleContainer>
+				<p>...</p>
+			</BackgroundContainer>
+		);
+	}
 }
 
 export default ArticlesPage;

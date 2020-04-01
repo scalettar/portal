@@ -1,8 +1,8 @@
 import React from "react";
 
-import { BackgroundContainer, MainTitleContainer } from "./personal-page.styles";
+import { BackgroundContainer, MainTitleContainer } from "./projects-page.styles";
 
-class PersonalPage extends React.Component {
+class ProjectsPage extends React.Component {
 	render() {
 		return (
 			<BackgroundContainer>
@@ -13,4 +13,4 @@ class PersonalPage extends React.Component {
 	}
 }
 
-export default PersonalPage;
+export default ProjectsPage;

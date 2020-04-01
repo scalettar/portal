@@ -1,16 +1,16 @@
 import React from "react";
 
+import { BackgroundContainer, MainTitleContainer } from "./technical-page.styles";
+
 class TechnicalPage extends React.Component {
-  render() {
-    return (
-      <div>
-        <h2>Projects</h2>
-        <p>
-          <a href="https://playkindo.com">Kindo</a>
-        </p>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<BackgroundContainer>
+				<MainTitleContainer>Technical</MainTitleContainer>
+				<p>...</p>
+			</BackgroundContainer>
+		);
+	}
 }
 
 export default TechnicalPage;

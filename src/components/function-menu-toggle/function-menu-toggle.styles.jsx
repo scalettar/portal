@@ -1,19 +1,44 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const MainContainer = styled.div``;
+export const BackgroundContainer = styled.div``;
+
+export const HeaderContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    height: 75px;
+    background-color: black;
+`;
 
 export const ButtonContainer = styled.button`
-    background-color: white;
-    font-size: 30px;
-    margin: 20px;
-    width: 50px;
+    background-color: black;
+    color: white;
+	font-size: 30px;
+	width: 50px;
     height: 50px;
-    border-radius: 15;
-    border: none;
-    outline: none;
+    margin-left: 15px;
+	border: none;
+	outline: none;
 
-    &:hover{
-        color: grey;
-        cursor: pointer;
+	&:hover {
+		color: #ff3c00;
+		cursor: pointer;
+	}
+`;
+
+export const TitleContainer = styled(Link)`
+    font-size: 30px;
+    margin-right: 25px;
+    color: white;
+    outline: none;
+    text-decoration: none;
+    font-size: 25px;
+    &:visited {
+        color: white;
+    }
+    &:hover {
+        color: #ff3c00;
     }
 `;
