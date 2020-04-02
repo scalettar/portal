@@ -6,7 +6,7 @@ class ProjectsPage extends React.Component {
 	render() {
 		return (
 			<BackgroundContainer>
-				<MainTitleContainer>Personal</MainTitleContainer>
+				<MainTitleContainer>Projects</MainTitleContainer>
 				<p>...</p>
 			</BackgroundContainer>
 		);

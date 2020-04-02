@@ -1,18 +1,28 @@
 import styled, { css } from "styled-components";
-import background from "../../assets/backgroundTechnical.jpg";
 
-import iconFolder from "../../assets/iconFolder.png";
+import iconGithub from "../../assets/iconGithub.png";
+import iconLinkedIn from "../../assets/iconLinkedIn.png";
 
 //=====================================
 // ICON LOGIC
 //=====================================
 const getItemIconImage = props => {
-    return iconFolderStyle;
+	if (props.iconType === "Github") {
+		return iconGithubStyle;
+	} else if (props.iconType === "LinkedIn") {
+		return iconLinkedInStyle;
+	} else return iconNoneStyle;
 };
 
-const iconFolderStyle = css`
-	background-image: url(${iconFolder});
+const iconGithubStyle = css`
+	background-image: url(${iconGithub});
 `;
+
+const iconLinkedInStyle = css`
+	background-image: url(${iconLinkedIn});
+`;
+
+const iconNoneStyle = css``;
 
 //=====================================
 // MAIN STYLING
@@ -21,11 +31,7 @@ const iconFolderStyle = css`
 export const BackgroundContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-    align-items: center;
-    /* background-image: url(${background});
-    background-position: 50% 50%; */
-    /* background-size: 100%;
-    background-repeat: repeat; */
+	align-items: center;
 `;
 
 export const MainContainer = styled.div`
@@ -58,22 +64,22 @@ export const ItemsContainer = styled.div`
 export const ItemContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-    align-items: center;
-    &:hover{
-        opacity: 0.7;
-    }
+	align-items: center;
+	&:hover {
+		opacity: 0.7;
+	}
 `;
 
 export const ItemTitleContainer = styled.div`
-    font-size: 15px;
+	font-size: 15px;
 `;
 
 export const ItemIconContainer = styled.button`
 	margin: 5px;
 	width: 100px;
 	height: 100px;
-    border-radius: 5px;
-    background: none;
+	border-radius: 5px;
+	background: none;
 	border: none;
     outline: none;
     &:hover{
@@ -81,5 +87,5 @@ export const ItemIconContainer = styled.button`
     }
 
 	${getItemIconImage}
-    background-size: cover;
+	background-size: cover;
 `;

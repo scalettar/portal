@@ -1,11 +1,12 @@
 import React from "react";
 
+import FolderTechnical from "../../components/folder-technical/folder-technical.component";
+import FolderPersonal from "../../components/folder-personal/folder-personal.component";
+
 import {
 	BackgroundContainer,
 	MainContainer,
-	MainTitleContainer,
 	SectionContainer,
-	SectionTitleContainer,
 	ItemsContainer,
 	ItemContainer,
 	ItemTitleContainer,
@@ -14,7 +15,6 @@ import {
 
 class HomePage extends React.Component {
 	state = {
-		openedApp: "None",
 		openedFolder: "Technical"
 	};
 
@@ -27,34 +27,28 @@ class HomePage extends React.Component {
 			this.setState({
 				openedFolder: "Personal"
 			});
-		} else if (iconName === "Language") {
-			this.setState({
-				openedApp: "Language"
-			});
-		} else if (iconName === "Health") {
-			this.setState({
-				openedApp: "Health"
-			});
-		} else if (iconName === "Music") {
-			this.setState({
-				openedApp: "Music"
-			});
-		} else if (iconName === "Kindo") {
-			this.setState({
-				openedApp: "Kindo"
-			});
-		} else {
-			this.setState({
-				openedApp: "None"
-			});
-		}
+        } else if (iconName === "FolderWebsites") {
+            this.setState({
+                openedFolder: "Websites"
+            });
+        } else {
+            this.setState({
+                openedFolder: "None"
+            })
+        }
 	}
 
 	render() {
+        const openedFolder = this.state.openedFolder;
+        let renderedFolder;
+        if (openedFolder === "Technical") {
+            renderedFolder = <FolderTechnical />
+        } else if (openedFolder === "Personal") {
+            renderedFolder = <FolderPersonal />
+        }
 		return (
 			<BackgroundContainer>
 				<MainContainer>
-					<MainTitleContainer>Home</MainTitleContainer>
 					<SectionContainer>
 						<ItemsContainer>
 							<ItemContainer>
@@ -65,47 +59,34 @@ class HomePage extends React.Component {
 									IconType="Folder"
 								></ItemIconContainer>
 								<ItemTitleContainer>
-									Projects
+									Technical
 								</ItemTitleContainer>
 							</ItemContainer>
 							<ItemContainer>
-								<ItemIconContainer iconType="Github" />
-								<ItemTitleContainer>Github</ItemTitleContainer>
-							</ItemContainer>
-							<ItemContainer>
-								<ItemIconContainer iconType="LinkedIn" />
+								<ItemIconContainer
+									onClick={() =>
+										this.handleIconClick("FolderPersonal")
+									}
+									IconType="Folder"
+								></ItemIconContainer>
 								<ItemTitleContainer>
-									LinkedIn
+									Personal
 								</ItemTitleContainer>
 							</ItemContainer>
-						</ItemsContainer>
-					</SectionContainer>
-					<SectionContainer>
-						<ItemsContainer>
 							<ItemContainer>
-								<ItemIconContainer iconType="Language" />
+								<ItemIconContainer
+									onClick={() =>
+										this.handleIconClick("FolderWebsites")
+									}
+									IconType="Folder"
+								></ItemIconContainer>
 								<ItemTitleContainer>
-									Language
+									Websites
 								</ItemTitleContainer>
 							</ItemContainer>
-							<ItemContainer>
-								<ItemIconContainer iconType="Health" />
-								<ItemTitleContainer>Health</ItemTitleContainer>
-							</ItemContainer>
-							<ItemContainer>
-								<ItemIconContainer iconType="Music" />
-								<ItemTitleContainer>Music</ItemTitleContainer>
-							</ItemContainer>
 						</ItemsContainer>
 					</SectionContainer>
-					<SectionContainer>
-						<ItemsContainer>
-							<ItemContainer>
-								<ItemIconContainer iconType="Kindo" />
-								<ItemTitleContainer>Kindo</ItemTitleContainer>
-							</ItemContainer>
-						</ItemsContainer>
-					</SectionContainer>
+                    {renderedFolder}
 				</MainContainer>
 			</BackgroundContainer>
 		);

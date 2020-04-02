@@ -1,18 +1,42 @@
 import styled, { css } from "styled-components";
-import background from "../../assets/backgroundTechnical.jpg";
 
-import iconFolder from "../../assets/iconFolder.png";
+import iconLanguage from "../../assets/iconDuolingo.png";
+import iconHealth from "../../assets/iconActivity.png";
+import iconMusic from "../../assets/iconPiano.png";
+import iconKindo from "../../assets/iconKindo.jpg";
 
 //=====================================
 // ICON LOGIC
 //=====================================
 const getItemIconImage = props => {
-    return iconFolderStyle;
+	if (props.iconType === "Language") {
+		return iconLanguageStyle;
+	} else if (props.iconType === "Health") {
+		return iconHealthStyle;
+	} else if (props.iconType === "Music") {
+		return iconMusicStyle;
+	} else if (props.iconType === "Kindo") {
+		return iconKindoStyle;
+	} else return iconNoneStyle;
 };
 
-const iconFolderStyle = css`
-	background-image: url(${iconFolder});
+const iconLanguageStyle = css`
+	background-image: url(${iconLanguage});
 `;
+
+const iconHealthStyle = css`
+	background-image: url(${iconHealth});
+`;
+
+const iconMusicStyle = css`
+	background-image: url(${iconMusic});
+`;
+
+const iconKindoStyle = css`
+	background-image: url(${iconKindo});
+`;
+
+const iconNoneStyle = css``;
 
 //=====================================
 // MAIN STYLING
@@ -21,11 +45,7 @@ const iconFolderStyle = css`
 export const BackgroundContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-    align-items: center;
-    /* background-image: url(${background});
-    background-position: 50% 50%; */
-    /* background-size: 100%;
-    background-repeat: repeat; */
+	align-items: center;
 `;
 
 export const MainContainer = styled.div`
@@ -58,22 +78,22 @@ export const ItemsContainer = styled.div`
 export const ItemContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-    align-items: center;
-    &:hover{
-        opacity: 0.7;
-    }
+	align-items: center;
+	&:hover {
+		opacity: 0.7;
+	}
 `;
 
 export const ItemTitleContainer = styled.div`
-    font-size: 15px;
+	font-size: 15px;
 `;
 
 export const ItemIconContainer = styled.button`
 	margin: 5px;
 	width: 100px;
 	height: 100px;
-    border-radius: 5px;
-    background: none;
+	border-radius: 5px;
+	background: none;
 	border: none;
     outline: none;
     &:hover{
@@ -81,5 +101,5 @@ export const ItemIconContainer = styled.button`
     }
 
 	${getItemIconImage}
-    background-size: cover;
+	background-size: cover;
 `;
