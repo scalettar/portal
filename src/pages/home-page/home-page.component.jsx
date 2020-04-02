@@ -9,47 +9,71 @@ import {
 	ItemsContainer,
 	ItemContainer,
 	ItemTitleContainer,
-	ItemDisplayContainer
+	ItemIconContainer
 } from "./home-page.styles";
 
-import iconPortfolio from "../../assets/iconFolder.png";
-import iconGithub from "../../assets/iconGithub.png";
-import iconLinkedIn from "../../assets/iconLinkedIn.png";
-import iconLanguage from "../../assets/iconDuolingo.png";
-import iconHealth from "../../assets/iconActivity.png";
-import iconMusic from "../../assets/iconPiano.png";
-import iconKindo from "../../assets/iconKindo.jpg";
-
 class HomePage extends React.Component {
+	state = {
+		openedApp: "None",
+		openedFolder: "Technical"
+	};
+
+	handleIconClick(iconName) {
+		if (iconName === "FolderTechnical") {
+			this.setState({
+				openedFolder: "Technical"
+			});
+		} else if (iconName === "FolderPersonal") {
+			this.setState({
+				openedFolder: "Personal"
+			});
+		} else if (iconName === "Language") {
+			this.setState({
+				openedApp: "Language"
+			});
+		} else if (iconName === "Health") {
+			this.setState({
+				openedApp: "Health"
+			});
+		} else if (iconName === "Music") {
+			this.setState({
+				openedApp: "Music"
+			});
+		} else if (iconName === "Kindo") {
+			this.setState({
+				openedApp: "Kindo"
+			});
+		} else {
+			this.setState({
+				openedApp: "None"
+			});
+		}
+	}
+
 	render() {
 		return (
 			<BackgroundContainer>
 				<MainContainer>
 					<MainTitleContainer>Home</MainTitleContainer>
 					<SectionContainer>
-						<SectionTitleContainer>Technical</SectionTitleContainer>
 						<ItemsContainer>
 							<ItemContainer>
-								<ItemDisplayContainer
-									alt="[portfolio]"
-									src={iconPortfolio}
-								/>
-								<ItemTitleContainer>Projects</ItemTitleContainer>
-							</ItemContainer>
-                            <ItemContainer>
-								<ItemDisplayContainer
-									alt="[github]"
-									src={iconGithub}
-								/>
+								<ItemIconContainer
+									onClick={() =>
+										this.handleIconClick("FolderTechnical")
+									}
+									IconType="Folder"
+								></ItemIconContainer>
 								<ItemTitleContainer>
-									Github
+									Projects
 								</ItemTitleContainer>
 							</ItemContainer>
 							<ItemContainer>
-								<ItemDisplayContainer
-									alt="[linkedin]"
-									src={iconLinkedIn}
-								/>
+								<ItemIconContainer iconType="Github" />
+								<ItemTitleContainer>Github</ItemTitleContainer>
+							</ItemContainer>
+							<ItemContainer>
+								<ItemIconContainer iconType="LinkedIn" />
 								<ItemTitleContainer>
 									LinkedIn
 								</ItemTitleContainer>
@@ -57,38 +81,27 @@ class HomePage extends React.Component {
 						</ItemsContainer>
 					</SectionContainer>
 					<SectionContainer>
-						<SectionTitleContainer>Personal</SectionTitleContainer>
 						<ItemsContainer>
 							<ItemContainer>
-								<ItemDisplayContainer
-									alt="[language]"
-									src={iconLanguage}
-								/>
+								<ItemIconContainer iconType="Language" />
 								<ItemTitleContainer>
 									Language
 								</ItemTitleContainer>
 							</ItemContainer>
 							<ItemContainer>
-								<ItemDisplayContainer
-									alt="[health]"
-									src={iconHealth}
-								/>
+								<ItemIconContainer iconType="Health" />
 								<ItemTitleContainer>Health</ItemTitleContainer>
 							</ItemContainer>
 							<ItemContainer>
-								<ItemDisplayContainer
-									alt="[music]"
-									src={iconMusic}
-								/>
+								<ItemIconContainer iconType="Music" />
 								<ItemTitleContainer>Music</ItemTitleContainer>
 							</ItemContainer>
 						</ItemsContainer>
 					</SectionContainer>
 					<SectionContainer>
-						<SectionTitleContainer>Websites</SectionTitleContainer>
 						<ItemsContainer>
 							<ItemContainer>
-                                <ItemDisplayContainer alt="[kindo]" src={iconKindo}/>
+								<ItemIconContainer iconType="Kindo" />
 								<ItemTitleContainer>Kindo</ItemTitleContainer>
 							</ItemContainer>
 						</ItemsContainer>

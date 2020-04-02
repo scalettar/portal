@@ -4,8 +4,8 @@ import FunctionMenu from "../function-menu/function-menu.component";
 import {
 	ButtonContainer,
 	BackgroundContainer,
-    HeaderContainer,
-    TitleContainer
+	HeaderContainer,
+	TitleContainer
 } from "./function-menu-toggle.styles";
 
 /* DESCRIPTION
@@ -30,7 +30,7 @@ class FunctionMenuToggle extends React.Component {
 					<ButtonContainer onClick={() => this.handleClick()}>
 						☰
 					</ButtonContainer>
-                    <TitleContainer to="/">Daniel Scalettar</TitleContainer>
+					<TitleContainer to="/">Daniel Scalettar</TitleContainer>
 				</HeaderContainer>
 				<FunctionMenu
 					onClick={() => this.handleClick()}
