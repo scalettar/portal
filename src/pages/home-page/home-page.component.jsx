@@ -2,6 +2,7 @@ import React from "react";
 
 import FolderTechnical from "../../components/folder-technical/folder-technical.component";
 import FolderPersonal from "../../components/folder-personal/folder-personal.component";
+import FolderWebsites from "../../components/folder-websites/folder-websites.component";
 
 import {
 	BackgroundContainer,
@@ -18,7 +19,7 @@ class HomePage extends React.Component {
 		openedFolder: "Technical"
 	};
 
-	handleIconClick(iconName) {
+	handleIconHover(iconName) {
 		if (iconName === "FolderTechnical") {
 			this.setState({
 				openedFolder: "Technical"
@@ -41,10 +42,24 @@ class HomePage extends React.Component {
 	render() {
         const openedFolder = this.state.openedFolder;
         let renderedFolder;
+        let iconTechnical;
+        let iconPersonal;
+        let iconWebsites;
         if (openedFolder === "Technical") {
             renderedFolder = <FolderTechnical />
+            iconTechnical = "FolderOpened";
+            iconPersonal = "FolderClosed";
+            iconWebsites = "FolderClosed";
         } else if (openedFolder === "Personal") {
             renderedFolder = <FolderPersonal />
+            iconPersonal = "FolderOpened"
+            iconTechnical = "FolderClosed"
+            iconWebsites = "FolderClosed"
+        } else if (openedFolder === "Websites") {
+            renderedFolder = <FolderWebsites />
+            iconWebsites = "FolderOpened"
+            iconTechnical = "FolderClosed"
+            iconPersonal = "FolderClosed"
         }
 		return (
 			<BackgroundContainer>
@@ -53,10 +68,10 @@ class HomePage extends React.Component {
 						<ItemsContainer>
 							<ItemContainer>
 								<ItemIconContainer
-									onClick={() =>
-										this.handleIconClick("FolderTechnical")
+									onMouseEnter={() =>
+										this.handleIconHover("FolderTechnical")
 									}
-									IconType="Folder"
+									iconType={iconTechnical}
 								></ItemIconContainer>
 								<ItemTitleContainer>
 									Technical
@@ -64,10 +79,10 @@ class HomePage extends React.Component {
 							</ItemContainer>
 							<ItemContainer>
 								<ItemIconContainer
-									onClick={() =>
-										this.handleIconClick("FolderPersonal")
+									onMouseEnter={() =>
+										this.handleIconHover("FolderPersonal")
 									}
-									IconType="Folder"
+									iconType={iconPersonal}
 								></ItemIconContainer>
 								<ItemTitleContainer>
 									Personal
@@ -75,10 +90,10 @@ class HomePage extends React.Component {
 							</ItemContainer>
 							<ItemContainer>
 								<ItemIconContainer
-									onClick={() =>
-										this.handleIconClick("FolderWebsites")
+									onMouseEnter={() =>
+										this.handleIconHover("FolderWebsites")
 									}
-									IconType="Folder"
+									iconType={iconWebsites}
 								></ItemIconContainer>
 								<ItemTitleContainer>
 									Websites

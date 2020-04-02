@@ -1,17 +1,26 @@
 import styled, { css } from "styled-components";
 import background from "../../assets/backgroundTechnical.jpg";
 
-import iconFolder from "../../assets/iconFolder.png";
+import iconFolderClosed from "../../assets/iconFolderClosed.png";
+import iconFolderOpened from "../../assets/iconFolderOpened.png";
 
 //=====================================
 // ICON LOGIC
 //=====================================
 const getItemIconImage = props => {
-    return iconFolderStyle;
+	if (props.iconType === "FolderOpened") {
+		return iconFolderOpenedStyle;
+	} else {
+		return iconFolderClosedStyle;
+	}
 };
 
-const iconFolderStyle = css`
-	background-image: url(${iconFolder});
+const iconFolderOpenedStyle = css`
+	background-image: url(${iconFolderOpened});
+`;
+
+const iconFolderClosedStyle = css`
+	background-image: url(${iconFolderClosed});
 `;
 
 //=====================================
@@ -58,28 +67,28 @@ export const ItemsContainer = styled.div`
 export const ItemContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-    align-items: center;
-    &:hover{
-        opacity: 0.7;
-    }
+	align-items: center;
+	&:hover {
+		opacity: 0.7;
+	}
 `;
 
 export const ItemTitleContainer = styled.div`
-    font-size: 15px;
+	font-size: 15px;
 `;
 
 export const ItemIconContainer = styled.button`
 	margin: 5px;
 	width: 100px;
 	height: 100px;
-    border-radius: 5px;
-    background: none;
+	border-radius: 5px;
+	background: none;
 	border: none;
-    outline: none;
-    &:hover{
-        cursor: pointer;
-    }
+	outline: none;
+	&:hover {
+		cursor: pointer;
+	}
 
 	${getItemIconImage}
-    background-size: cover;
+	background-size: cover;
 `;

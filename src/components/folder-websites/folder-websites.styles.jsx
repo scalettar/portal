@@ -1,32 +1,18 @@
 import styled, { css } from "styled-components";
 
-import iconLanguage from "../../assets/iconDuolingo.png";
-import iconHealth from "../../assets/iconActivity.png";
-import iconMusic from "../../assets/iconPiano.png";
+import iconKindo from "../../assets/iconKindo.jpg";
 
 //=====================================
 // ICON LOGIC
 //=====================================
 const getItemIconImage = props => {
-	if (props.iconType === "Language") {
-		return iconLanguageStyle;
-	} else if (props.iconType === "Health") {
-		return iconHealthStyle;
-	} else if (props.iconType === "Music") {
-		return iconMusicStyle;
+	if (props.iconType === "Kindo") {
+		return iconKindoStyle;
 	} else return iconNoneStyle;
 };
 
-const iconLanguageStyle = css`
-	background-image: url(${iconLanguage});
-`;
-
-const iconHealthStyle = css`
-	background-image: url(${iconHealth});
-`;
-
-const iconMusicStyle = css`
-	background-image: url(${iconMusic});
+const iconKindoStyle = css`
+	background-image: url(${iconKindo});
 `;
 
 const iconNoneStyle = css``;
@@ -88,10 +74,10 @@ export const ItemIconContainer = styled.button`
 	border-radius: 5px;
 	background: none;
 	border: none;
-    outline: none;
-    &:hover{
-        cursor: pointer;
-    }
+	outline: none;
+	&:hover {
+		cursor: pointer;
+	}
 
 	${getItemIconImage}
 	background-size: cover;

@@ -8,17 +8,17 @@ import {
 	ItemContainer,
 	ItemIconContainer,
 	ItemTitleContainer
-} from "./folder-technical.styles";
+} from "./folder-websites.styles";
 
-class FolderTechnical extends React.Component {
+class FolderWebsites extends React.Component {
 	state = {
 		openedApp: "None"
 	};
 
 	handleIconClick(iconName) {
-		if (iconName === "Resume") {
+		if (iconName === "Kindo") {
 			this.setState({
-				openedApp: "Resume"
+				openedApp: "Kindo"
 			});
 		} else {
 			this.setState({
@@ -34,14 +34,12 @@ class FolderTechnical extends React.Component {
 					<SectionContainer>
 						<ItemsContainer>
 							<ItemContainer>
-								<ItemIconContainer iconType="Github" />
-								<ItemTitleContainer>Github</ItemTitleContainer>
+								<ItemIconContainer iconType="Kindo" />
+								<ItemTitleContainer>Kindo</ItemTitleContainer>
 							</ItemContainer>
 							<ItemContainer>
-								<ItemIconContainer iconType="LinkedIn" />
-								<ItemTitleContainer>
-									LinkedIn
-								</ItemTitleContainer>
+								<ItemIconContainer iconType="None" />
+								<ItemTitleContainer></ItemTitleContainer>
 							</ItemContainer>
 							<ItemContainer>
 								<ItemIconContainer iconType="None" />
@@ -55,4 +53,4 @@ class FolderTechnical extends React.Component {
 	}
 }
 
-export default FolderTechnical;
+export default FolderWebsites;
