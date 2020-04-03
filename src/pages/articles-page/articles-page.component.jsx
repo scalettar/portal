@@ -7,7 +7,7 @@ class ArticlesPage extends React.Component {
 		return (
 			<BackgroundContainer>
 				<MainTitleContainer>Articles</MainTitleContainer>
-				<p>...</p>
+				<p>Under Construction...</p>
 			</BackgroundContainer>
 		);
 	}

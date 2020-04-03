@@ -6,13 +6,13 @@ import {
 	BackgroundContainer,
 	HeaderContainer,
 	TitleContainer
-} from "./function-menu-toggle.styles";
+} from "./function-header.styles";
 
 /* DESCRIPTION
 Contains a button which toggles the FunctionMenu component to be visible or invisible.
 */
 
-class FunctionMenuToggle extends React.Component {
+class Header extends React.Component {
 	state = {
 		visible: false
 	};
@@ -41,4 +41,4 @@ class FunctionMenuToggle extends React.Component {
 	}
 }
 
-export default FunctionMenuToggle;
+export default Header;

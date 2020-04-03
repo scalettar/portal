@@ -7,7 +7,8 @@ import {
 	ItemsContainer,
 	ItemContainer,
 	ItemIconContainer,
-	ItemTitleContainer
+	ItemTitleContainer,
+	ItemLinkContainer
 } from "./folder-websites.styles";
 
 class FolderWebsites extends React.Component {
@@ -33,10 +34,14 @@ class FolderWebsites extends React.Component {
 				<MainContainer>
 					<SectionContainer>
 						<ItemsContainer>
-							<ItemContainer>
-								<ItemIconContainer iconType="Kindo" />
-								<ItemTitleContainer>Kindo</ItemTitleContainer>
-							</ItemContainer>
+							<ItemLinkContainer href="https://playkindo.com" target="_blank">
+								<ItemContainer>
+									<ItemIconContainer iconType="Kindo" />
+									<ItemTitleContainer>
+										Kindo
+									</ItemTitleContainer>
+								</ItemContainer>
+							</ItemLinkContainer>
 							<ItemContainer>
 								<ItemIconContainer iconType="None" />
 								<ItemTitleContainer></ItemTitleContainer>

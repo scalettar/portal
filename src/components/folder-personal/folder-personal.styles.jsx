@@ -96,3 +96,11 @@ export const ItemIconContainer = styled.button`
 	${getItemIconImage}
 	background-size: cover;
 `;
+
+export const ItemLinkContainer = styled.a`
+	outline: none;
+    text-decoration: none;
+	&:visited {
+		color: black;
+	}
+`;

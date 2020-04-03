@@ -7,7 +7,7 @@ import {
 	ItemsContainer,
 	ItemContainer,
 	ItemIconContainer,
-	ItemTitleContainer
+    ItemTitleContainer
 } from "./folder-personal.styles";
 
 class FolderPersonal extends React.Component {

@@ -23,7 +23,7 @@ export const ButtonContainer = styled.button`
 	outline: none;
 
 	&:hover {
-		color: #ff3c00;
+		color: lime;
 		cursor: pointer;
 	}
 `;
@@ -39,6 +39,6 @@ export const TitleContainer = styled(Link)`
         color: white;
     }
     &:hover {
-        color: #ff3c00;
+        color: lime;
     }
 `;
