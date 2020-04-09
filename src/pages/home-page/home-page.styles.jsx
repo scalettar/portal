@@ -28,23 +28,29 @@ const iconFolderClosedStyle = css`
 //=====================================
 
 export const BackgroundContainer = styled.div`
+    height: calc(100vh - 75px);
+    background: whitesmoke;
+
+    background-image: url(${background});
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-repeat: repeat;
+
 	display: flex;
-	flex-direction: column;
+    flex-direction: column;
     align-items: center;
-    /* background-image: url(${background});
-    background-position: 50% 50%; */
-    /* background-size: 100%;
-    background-repeat: repeat; */
 `;
 
 export const MainContainer = styled.div`
+    width: 100vw;
+    max-width: 750px;
+    height: 100%;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding-top: 25px;
 	background: #ffffff;
-	width: 100vw;
-	max-width: 750px;
 `;
 
 export const SectionContainer = styled.div`
@@ -55,13 +61,14 @@ export const SectionContainer = styled.div`
 `;
 
 export const ItemsContainer = styled.div`
+	width: 100vw;
+	max-width: 750px;
+	height: 150px;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	width: 100vw;
-	max-width: 750px;
-	height: 150px;
 `;
 
 export const ItemContainer = styled.div`
@@ -81,7 +88,7 @@ export const ItemIconContainer = styled.button`
 	margin: 5px;
 	width: 100px;
 	height: 100px;
-	border-radius: 5px;
+    border-radius: 5px;
 	background: none;
 	border: none;
 	outline: none;

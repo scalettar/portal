@@ -8,8 +8,10 @@ import {
 class AppAboutPersonal extends React.Component {
     render() {
         return(
-            <BackgroundContainer onClick={this.props.onClick} openedApp={this.props.openedApp}>
-                <MainContainer>About Me</MainContainer>
+            <BackgroundContainer openedApp={this.props.openedApp}>
+                <MainContainer>About Me
+                    <div onClick={this.props.onClick}>Close</div>
+                </MainContainer>
             </BackgroundContainer>
         )
     }

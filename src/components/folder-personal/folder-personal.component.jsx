@@ -38,20 +38,21 @@ class FolderPersonal extends React.Component {
 				openedApp: "None"
 			});
 		}
-		console.log(this.state.openedApp);
+        console.log(this.state.openedApp);
+        console.log(iconName);
 	}
 
 	render() {
-		const openedApp = this.state.openedApp;
-		let renderedApp;
-		if (openedApp === "Language") {
-			renderedApp = (
-				<AppAboutPersonal
-					onClick={() => this.handleIconClick("Language")}
-					openedApp={this.state.openedApp}
-				/>
-			);
-		}
+		// const openedApp = this.state.openedApp;
+		// let renderedApp;
+		// if (openedApp === "Language") {
+		// 	renderedApp = (
+		// 		<AppAboutPersonal
+		// 			onClick={() => this.handleIconClick("None")}
+		// 			openedApp={this.state.openedApp}
+		// 		/>
+		// 	);
+		// }
 		return (
 			<BackgroundContainer>
 				<MainContainer>
@@ -79,7 +80,11 @@ class FolderPersonal extends React.Component {
 						</ItemsContainer>
 					</SectionContainer>
 				</MainContainer>
-				{renderedApp}
+				{/* {renderedApp} */}
+                <AppAboutPersonal
+					onClick={() => this.handleIconClick("None")}
+					openedApp={this.state.openedApp}
+				/>
 			</BackgroundContainer>
 		);
 	}
