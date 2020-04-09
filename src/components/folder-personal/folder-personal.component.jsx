@@ -7,15 +7,16 @@ import {
 	ItemsContainer,
 	ItemContainer,
 	ItemIconContainer,
-    ItemTitleContainer
+	ItemTitleContainer
 } from "./folder-personal.styles";
+import AppAboutPersonal from "../app-about-personal/app-about-personal.component";
 
 class FolderPersonal extends React.Component {
-    state = {
-        openedApp: "None"
-    }
+	state = {
+		openedApp: "None"
+	};
 
-    handleIconClick(iconName) {
+	handleIconClick(iconName) {
 		if (iconName === "Language") {
 			this.setState({
 				openedApp: "Language"
@@ -36,17 +37,33 @@ class FolderPersonal extends React.Component {
 			this.setState({
 				openedApp: "None"
 			});
-        }
-    }
+		}
+		console.log(this.state.openedApp);
+	}
 
 	render() {
+		const openedApp = this.state.openedApp;
+		let renderedApp;
+		if (openedApp === "Language") {
+			renderedApp = (
+				<AppAboutPersonal
+					onClick={() => this.handleIconClick("Language")}
+					openedApp={this.state.openedApp}
+				/>
+			);
+		}
 		return (
 			<BackgroundContainer>
 				<MainContainer>
 					<SectionContainer>
 						<ItemsContainer>
 							<ItemContainer>
-								<ItemIconContainer iconType="Language" />
+								<ItemIconContainer
+									onClick={() =>
+										this.handleIconClick("Language")
+									}
+									iconType="Language"
+								/>
 								<ItemTitleContainer>
 									Language
 								</ItemTitleContainer>
@@ -62,6 +79,7 @@ class FolderPersonal extends React.Component {
 						</ItemsContainer>
 					</SectionContainer>
 				</MainContainer>
+				{renderedApp}
 			</BackgroundContainer>
 		);
 	}

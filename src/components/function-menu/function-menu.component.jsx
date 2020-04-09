@@ -20,9 +20,6 @@ class FunctionMenu extends React.Component {
       >
         <LinksContainer>
           <LinkContainer to="/">Home</LinkContainer>
-          {/* <LinkContainer to="/technical">Technical</LinkContainer> */}
-          {/* <LinkContainer to="/personal">Personal</LinkContainer> */}
-          {/* <LinkContainer to="/projects">Projects</LinkContainer> */}
           <LinkContainer to="/articles">Articles</LinkContainer>
           <LinkContainer to="/about">About</LinkContainer>
         </LinksContainer>
