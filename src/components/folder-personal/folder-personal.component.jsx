@@ -9,7 +9,8 @@ import {
 	ItemIconContainer,
 	ItemTitleContainer
 } from "./folder-personal.styles";
-import AppAboutPersonal from "../app-about-personal/app-about-personal.component";
+
+import AppLoader from "../app-loader/app-loader.component";
 
 class FolderPersonal extends React.Component {
 	state = {
@@ -81,7 +82,7 @@ class FolderPersonal extends React.Component {
 					</SectionContainer>
 				</MainContainer>
 				{/* {renderedApp} */}
-                <AppAboutPersonal
+                <AppLoader
 					onClick={() => this.handleIconClick("None")}
 					openedApp={this.state.openedApp}
 				/>

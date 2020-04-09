@@ -9,6 +9,7 @@ export const HeaderContainer = styled.div`
     align-items: center;
     justify-content: space-between; 
     height: 75px;
+    width: 100%;
     background-color: black;
 `;
 

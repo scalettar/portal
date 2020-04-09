@@ -12,7 +12,7 @@ const visibleStyle = css`
 `;
 
 const invisibleStyle = css`
-	transform: translate3d(-100vw, 0, 0);
+	transform: translate3d(0, 100vh, 0);
 `;
 
 export const BackgroundContainer = styled.div`
@@ -34,12 +34,13 @@ export const BackgroundContainer = styled.div`
 `;
 
 export const MainContainer = styled.div`
+	width: 100vw;
+    height: 100vh;
+    max-width: 750px;
+    background: red;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding-top: 25px;
-	background: red;
-	width: 100vw;
-    height: 100vh;
-	max-width: 750px;
 `;
