@@ -18,7 +18,11 @@ class FolderPersonal extends React.Component {
 	};
 
 	handleIconClick(iconName) {
-		if (iconName === "Language") {
+		if (iconName === "AboutPersonal") {
+			this.setState({
+				openedApp: "AboutPersonal"
+			});
+		} else if (iconName === "Language") {
 			this.setState({
 				openedApp: "Language"
 			});
@@ -39,21 +43,9 @@ class FolderPersonal extends React.Component {
 				openedApp: "None"
 			});
 		}
-        console.log(this.state.openedApp);
-        console.log(iconName);
 	}
 
 	render() {
-		// const openedApp = this.state.openedApp;
-		// let renderedApp;
-		// if (openedApp === "Language") {
-		// 	renderedApp = (
-		// 		<AppAboutPersonal
-		// 			onClick={() => this.handleIconClick("None")}
-		// 			openedApp={this.state.openedApp}
-		// 		/>
-		// 	);
-		// }
 		return (
 			<BackgroundContainer>
 				<MainContainer>
@@ -71,18 +63,50 @@ class FolderPersonal extends React.Component {
 								</ItemTitleContainer>
 							</ItemContainer>
 							<ItemContainer>
-								<ItemIconContainer iconType="Health" />
-								<ItemTitleContainer>Health</ItemTitleContainer>
+								<ItemIconContainer
+									onClick={() =>
+										this.handleIconClick("Health")
+									}
+									iconType="Health"
+								/>
+								<ItemTitleContainer>
+									Health
+								</ItemTitleContainer>
 							</ItemContainer>
 							<ItemContainer>
-								<ItemIconContainer iconType="Music" />
+								<ItemIconContainer
+									onClick={() =>
+										this.handleIconClick("Music")
+									}
+									iconType="Music"
+								/>
 								<ItemTitleContainer>Music</ItemTitleContainer>
 							</ItemContainer>
 						</ItemsContainer>
 					</SectionContainer>
+					<SectionContainer>
+						<ItemsContainer>
+							<ItemContainer>
+								<ItemIconContainer
+									onClick={() =>
+										this.handleIconClick("AboutPersonal")
+									}
+									iconType="AboutPersonal"
+								/>
+								<ItemTitleContainer>About</ItemTitleContainer>
+							</ItemContainer>
+							<ItemContainer>
+								<ItemIconContainer iconType="None" />
+								<ItemTitleContainer></ItemTitleContainer>
+							</ItemContainer>
+							<ItemContainer>
+								<ItemIconContainer iconType="None" />
+								<ItemTitleContainer></ItemTitleContainer>
+							</ItemContainer>
+						</ItemsContainer>
+					</SectionContainer>
 				</MainContainer>
-				{/* {renderedApp} */}
-                <AppLoader
+				<AppLoader
 					onClick={() => this.handleIconClick("None")}
 					openedApp={this.state.openedApp}
 				/>

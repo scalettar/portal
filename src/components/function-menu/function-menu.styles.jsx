@@ -47,9 +47,9 @@ export const LinkContainer = styled(Link)`
 		color: black;
 	}
 	&:focus {
-		color: limegreen;
+		color: grey;
 	}
 	&:hover {
-		color: limegreen;
+		color: grey;
 	}
 `;

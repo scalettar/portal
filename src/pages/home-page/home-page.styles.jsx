@@ -28,7 +28,8 @@ const iconFolderClosedStyle = css`
 //=====================================
 
 export const BackgroundContainer = styled.div`
-    height: calc(100vh - 75px);
+    height: auto;
+    min-height: calc(100vh - 75px);
     width: 100%;
     background: whitesmoke;
 
@@ -45,12 +46,11 @@ export const BackgroundContainer = styled.div`
 export const MainContainer = styled.div`
     width: 100vw;
     max-width: 750px;
-    height: 100%;
+    min-height: calc(100vh - 75px);
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 25px;
     background: #ffffff;
 `;
 
@@ -58,13 +58,13 @@ export const SectionContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-    margin-top: 25px;
+    padding-top: 50px;
 `;
 
 export const ItemsContainer = styled.div`
+    height: 150px;
 	width: 100vw;
 	max-width: 750px;
-    height: 150px;
 
 	display: flex;
 	flex-direction: row;

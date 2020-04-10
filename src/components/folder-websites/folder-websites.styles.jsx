@@ -28,13 +28,12 @@ export const BackgroundContainer = styled.div`
 `;
 
 export const MainContainer = styled.div`
+	width: 100vw;
+	max-width: 750px;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 25px;
-	background: #ffffff;
-	width: 100vw;
-	max-width: 750px;
 `;
 
 export const SectionContainer = styled.div`
@@ -45,13 +44,15 @@ export const SectionContainer = styled.div`
 `;
 
 export const ItemsContainer = styled.div`
+	width: 100vw;
+	max-width: 750px;
+	height: 150px;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	width: 100vw;
-	max-width: 750px;
-	height: 150px;
+	flex-wrap: wrap;
 `;
 
 export const ItemContainer = styled.div`
@@ -85,7 +86,7 @@ export const ItemIconContainer = styled.button`
 
 export const ItemLinkContainer = styled.a`
 	outline: none;
-    text-decoration: none;
+	text-decoration: none;
 	&:visited {
 		color: black;
 	}

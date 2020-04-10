@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 
+import iconAbout from "../../assets/iconAboutPersonal.png";
 import iconLanguage from "../../assets/iconDuolingo.png";
 import iconHealth from "../../assets/iconActivity.png";
 import iconMusic from "../../assets/iconPiano.png";
@@ -8,7 +9,9 @@ import iconMusic from "../../assets/iconPiano.png";
 // ICON LOGIC
 //=====================================
 const getItemIconImage = props => {
-	if (props.iconType === "Language") {
+	if (props.iconType === "AboutPersonal") {
+		return iconAboutStyle;
+	} else if (props.iconType === "Language") {
 		return iconLanguageStyle;
 	} else if (props.iconType === "Health") {
 		return iconHealthStyle;
@@ -16,6 +19,10 @@ const getItemIconImage = props => {
 		return iconMusicStyle;
 	} else return iconNoneStyle;
 };
+
+const iconAboutStyle = css`
+	background-image: url(${iconAbout});
+`;
 
 const iconLanguageStyle = css`
 	background-image: url(${iconLanguage});
@@ -42,13 +49,12 @@ export const BackgroundContainer = styled.div`
 `;
 
 export const MainContainer = styled.div`
+	width: 100vw;
+	max-width: 750px;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 25px;
-	background: #ffffff;
-	width: 100vw;
-	max-width: 750px;
 `;
 
 export const SectionContainer = styled.div`
@@ -59,13 +65,15 @@ export const SectionContainer = styled.div`
 `;
 
 export const ItemsContainer = styled.div`
+	width: 100vw;
+	max-width: 750px;
+	height: 150px;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	width: 100vw;
-	max-width: 750px;
-	height: 150px;
+	flex-wrap: wrap;
 `;
 
 export const ItemContainer = styled.div`
@@ -88,10 +96,10 @@ export const ItemIconContainer = styled.button`
 	border-radius: 5px;
 	background: none;
 	border: none;
-    outline: none;
-    &:hover{
-        cursor: pointer;
-    }
+	outline: none;
+	&:hover {
+		cursor: pointer;
+	}
 
 	${getItemIconImage}
 	background-size: cover;
@@ -99,7 +107,7 @@ export const ItemIconContainer = styled.button`
 
 export const ItemLinkContainer = styled.a`
 	outline: none;
-    text-decoration: none;
+	text-decoration: none;
 	&:visited {
 		color: black;
 	}

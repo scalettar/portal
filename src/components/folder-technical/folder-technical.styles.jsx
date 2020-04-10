@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 
+import iconAbout from "../../assets/iconAboutTechnical.png";
 import iconGithub from "../../assets/iconGithub.png";
 import iconLinkedIn from "../../assets/iconLinkedIn.png";
 
@@ -7,12 +8,19 @@ import iconLinkedIn from "../../assets/iconLinkedIn.png";
 // ICON LOGIC
 //=====================================
 const getItemIconImage = props => {
-	if (props.iconType === "Github") {
+    if (props.iconType === "AboutTechnical") {
+        return iconAboutStyle;
+    }
+    else if (props.iconType === "Github") {
 		return iconGithubStyle;
 	} else if (props.iconType === "LinkedIn") {
 		return iconLinkedInStyle;
 	} else return iconNoneStyle;
 };
+
+const iconAboutStyle = css`
+    background-image: url(${iconAbout});
+`;
 
 const iconGithubStyle = css`
 	background-image: url(${iconGithub});
@@ -35,13 +43,12 @@ export const BackgroundContainer = styled.div`
 `;
 
 export const MainContainer = styled.div`
+	width: 100vw;
+	max-width: 750px;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 25px;
-	background: #ffffff;
-	width: 100vw;
-	max-width: 750px;
 `;
 
 export const SectionContainer = styled.div`
@@ -52,13 +59,14 @@ export const SectionContainer = styled.div`
 `;
 
 export const ItemsContainer = styled.div`
+	width: 100vw;
+	max-width: 750px;
+	height: 150px;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	width: 100vw;
-	max-width: 750px;
-	height: 150px;
 `;
 
 export const ItemContainer = styled.div`
@@ -81,10 +89,10 @@ export const ItemIconContainer = styled.button`
 	border-radius: 5px;
 	background: none;
 	border: none;
-    outline: none;
-    &:hover{
-        cursor: pointer;
-    }
+	outline: none;
+	&:hover {
+		cursor: pointer;
+	}
 
 	${getItemIconImage}
 	background-size: cover;
@@ -92,7 +100,7 @@ export const ItemIconContainer = styled.button`
 
 export const ItemLinkContainer = styled.a`
 	outline: none;
-    text-decoration: none;
+	text-decoration: none;
 	&:visited {
 		color: black;
 	}

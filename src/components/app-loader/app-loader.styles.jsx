@@ -1,7 +1,7 @@
 import styled , { css } from "styled-components";
 
 const getVisibleStyles = props => {
-	if (props.openedApp === "Language") {
+	if (props.openedApp !== "None") {
 		return visibleStyle;
 	} else return invisibleStyle;
 };
@@ -18,13 +18,13 @@ const invisibleStyle = css`
 export const BackgroundContainer = styled.div`
 	width: 100vw;
 	height: 100vh;
-	background-color: yellow;
 	position: fixed;
 	top: 0;
 	left: 0;
 	transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
 	overflow: scroll;
-	z-index: 1000;
+    z-index: 1000;
+    background: whitesmoke;
 
 	display: flex;
 	flex-direction: column;
@@ -34,10 +34,10 @@ export const BackgroundContainer = styled.div`
 `;
 
 export const MainContainer = styled.div`
-	width: 100vw;
-    height: 100vh;
+	width: 100%;
+    height: 100%;
     max-width: 750px;
-    background: red;
+    background: white;
 
 	display: flex;
 	flex-direction: column;
