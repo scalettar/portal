@@ -24,7 +24,8 @@ export const BackgroundContainer = styled.div`
 	transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
 	overflow: scroll;
     z-index: 1000;
-    background: whitesmoke;
+    backdrop-filter: opacity(0.5);
+    overflow: hidden;
 
 	display: flex;
 	flex-direction: column;
@@ -42,5 +43,4 @@ export const MainContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 25px;
 `;

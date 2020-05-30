@@ -100,7 +100,8 @@ export const ItemIconContainer = styled.button`
 
 export const ItemLinkContainer = styled.a`
 	outline: none;
-	text-decoration: none;
+    text-decoration: none;
+    color: black;
 	&:visited {
 		color: black;
 	}
