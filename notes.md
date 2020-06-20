@@ -3,11 +3,12 @@ These are some notes to myself on how things work and/or things I plan to implem
 ## TODO REMINDER
 
 * Create "Under Construction" placeholder app
+  * For apps in progress, can include link to branch on github
 * Replace blank apps with dummy placeholder style (currently when you hover over an invisible app there is a hover hand)
 * Make consistent app icon set
 * Create blog/articles section (Make this a separate website? articles.scalettar.com and also short alternate url)
   * Create basic UI
-  * Make sure routing works properly
+  * Ensure routing functions properly
   * Create database and tags system to easily manage posts
 
 ## APP PLANS
@@ -42,7 +43,7 @@ These are some notes to myself on how things work and/or things I plan to implem
 * Update manually every month
 * Have the 5 songs I am learning/want to learn and the status:
   * Re-learned (100%) - Maple Leaf Rag - Scott Joplin 
-  * Learning (66%) - Cohen's Masterpiece - Garry Schyman
+  * Learned (100%) - Cohen's Masterpiece - Garry Schyman
   * Learning (50%) - Piano Concerto No. 1 "Anti-Ares" - Virkato Wakhmaninov
   * Re-learning (80%) - Every Heart - BoA
   * Re-learn (5%) - Prelude in C Sharp Minor - Sergei Rachmaninov
@@ -97,7 +98,7 @@ TAGS:
 
 ### Minor
 
-* Scalability: When making screen narrow (like on a phone), folders/icons are not completely centered. They are a little shifted to the right
+* Scaling: When making screen narrow (like on a phone), folders/icons are not completely centered. They are a little shifted to the right
 
 ### Major
 

@@ -1,3 +1,4 @@
 ## About
 
-This is the repo for my personal website.
+Personal website repo.
+See notes.md for general thoughts and plans.

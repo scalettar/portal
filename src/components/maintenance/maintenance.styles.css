@@ -1,0 +1,35 @@
+body {
+  background: #23262e;
+  height: 100vh;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+a:visited {
+  color: #ffffff;
+}
+a:focus {
+  color: #ffffff;
+}
+a:hover {
+  color: #aaaaaa;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+.cyan {
+  color: #00ffb7;
+}
+
+.white {
+  color: #ffffff
+}
