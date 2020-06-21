@@ -5,8 +5,12 @@ function MaintenancePage() {
   return (
     <body>
         <div class="wrapper">
-            <h1 class="cyan">Down for maintenance...</h1>
-            <p class="white">Site repo: <a href="https://github.com/scalettar/portal/tree/master">GITHUB</a></p>
+            <h1 class="title cyan">Daniel Scalettar</h1>
+            <div class="links">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/scalettar/">GITHUB</a>
+              •
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dscalettar/">LINKEDIN</a>
+            </div>
         </div>
     </body>
   );

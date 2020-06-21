@@ -41,21 +41,21 @@ These are some notes to myself on how things work and/or things I plan to implem
 * Practice log (replicate github commit chart)
 * Also list the number of days played in last month
 * Update manually every month
-* Have the 5 songs I am learning/want to learn and the status:
+* List songs currently learning and status:
   * Re-learned (100%) - Maple Leaf Rag - Scott Joplin 
   * Learned (100%) - Cohen's Masterpiece - Garry Schyman
   * Learning (50%) - Piano Concerto No. 1 "Anti-Ares" - Virkato Wakhmaninov
   * Re-learning (80%) - Every Heart - BoA
   * Re-learn (5%) - Prelude in C Sharp Minor - Sergei Rachmaninov
+* List pending songs to be added next
+  * Re-learn (0%) Athletic Theme (Super Mario World) - Koji Kondo
+  * Prelude in G Minor (Op. 23 No. 5) - Sergei Rachmaninov
+  * Old Town - Kohei Tanaka
+  * Merry Go Round of Life - Joe Hisaishi
+  * Flower Dance - DJ Okawari
 * For each song:
   *  Provide target mp3
   *  Link to relevant Article/blog section on my progress if one exists
-* Next 5 songs once current are complete
-  * Old Town - Kohei Tanaka
-  * Merry Go Round of Life - Joe Hisaishi
-  * Prelude in G Minor (Op. 23 No. 5) - Sergei Rachmaninov
-  * Flower Dance - DJ Okawari
-  * Re-learn (0%) - Forgot the name, have to find it
 
 ### Kindo
 

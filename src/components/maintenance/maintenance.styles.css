@@ -3,6 +3,8 @@ body {
   height: 100vh;
 }
 
+/* LINKS */
+
 a {
   outline: none;
   text-decoration: none;
@@ -18,6 +20,8 @@ a:hover {
   color: #aaaaaa;
 }
 
+/* CLASSES */
+
 .wrapper {
   height: 100%;
   display: flex;
@@ -25,9 +29,29 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-  
+
+.title {
+  margin: 30px;
+}
+
+.links {
+  width: 300px;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* COLORS */
+
 .cyan {
   color: #00ffb7;
+}
+
+.magenta {
+  color: #ff00aa;
 }
 
 .white {

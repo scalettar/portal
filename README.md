@@ -1,5 +1,5 @@
 ## About
 
-Personal website repo.
+Personal website repo. 
 
-See notes.md for general thoughts and plans.
+Simple placeholder currently in use while website is being revamped.
