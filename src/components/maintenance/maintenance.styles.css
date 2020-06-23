@@ -15,9 +15,11 @@ a:visited {
 }
 a:focus {
   color: #ffffff;
+  text-shadow: 0px 0px 15px #ffffff;
 }
 a:hover {
-  color: #aaaaaa;
+  color: #ffffff;
+  text-shadow: 0px 0px 15px #ffffff;
 }
 
 /* CLASSES */
