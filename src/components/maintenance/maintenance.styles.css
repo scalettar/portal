@@ -11,11 +11,7 @@ a {
   color: #ffffff;
 }
 a:visited {
-  color: #ffffff;
-}
-a:focus {
-  color: #ffffff;
-  text-shadow: 0px 0px 15px #ffffff;
+  color: #2e333a;
 }
 a:hover {
   color: #ffffff;
@@ -38,7 +34,7 @@ a:hover {
 
 .links {
   width: 300px;
-  color: #ffffff;
+  color: #2e333a;
 
   display: flex;
   flex-direction: row;
@@ -50,6 +46,10 @@ a:hover {
 
 .cyan {
   color: #00ffb7;
+}
+
+.darkgrey {
+  color: #2e333a
 }
 
 .magenta {
